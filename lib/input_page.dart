@@ -1,5 +1,5 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -17,15 +17,64 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Center(child: Text(widget.title)),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'Body text.',
+      body: Column(
+        children: <Widget>[
+          Expanded(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Expanded(
+                  child: Container(
+//                    width: 170,
+                      margin: EdgeInsets.all(15.0),
+                      decoration: BoxDecoration(
+                        color: Color(0xff1d1e33),
+                        borderRadius: BorderRadius.circular(10.0),
+                      )),
+                ),
+                Expanded(
+                  child: Container(
+                      margin: EdgeInsets.all(15.0),
+                      decoration: BoxDecoration(
+                        color: Color(0xff1d1e33),
+                        borderRadius: BorderRadius.circular(10.0),
+                      )),
+                ),
+              ],
             ),
-          ],
-        ),
+          ),
+          Expanded(
+            child: Container(
+                margin: EdgeInsets.all(15.0),
+                decoration: BoxDecoration(
+                  color: Color(0xff1d1e33),
+                  borderRadius: BorderRadius.circular(10.0),
+                )),
+          ),
+          Expanded(
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
+                Expanded(
+                  child: Container(
+                      margin: EdgeInsets.all(15.0),
+                      decoration: BoxDecoration(
+                        color: Color(0xff1d1e33),
+                        borderRadius: BorderRadius.circular(10.0),
+                      )),
+                ),
+                Expanded(
+                  child: Container(
+                      margin: EdgeInsets.all(15.0),
+                      decoration: BoxDecoration(
+                        color: Color(0xff1d1e33),
+                        borderRadius: BorderRadius.circular(10.0),
+                      )),
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
